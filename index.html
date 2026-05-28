@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权雨彤 - 个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 背景动画容器 -->
+    <div class="background-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">QUAN YUTONG</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#about" class="nav-link">关于我</a></li>
+                <li><a href="#resume" class="nav-link">个人简历</a></li>
+                <li><a href="#skills" class="nav-link">专业技能</a></li>
+                <li><a href="#hobbies" class="nav-link">兴趣爱好</a></li>
+                <li><a href="#journey" class="nav-link">人生经历</a></li>
+                <li><a href="#contact" class="nav-link">联系方式</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页区域 -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">你好，我是 <span class="highlight">QUAN YUTONG</span></h1>
+            <p class="hero-subtitle">软件工程师 | Java开发者 | 终身学习者</p>
+            <div class="hero-buttons">
+                <a href="#resume" class="btn btn-primary">查看简历</a>
+                <a href="#contact" class="btn btn-secondary">联系我</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="90" fill="#FF6B9D"/>
+                            <text x="100" y="120" font-size="60" fill="white" text-anchor="middle" font-weight="bold">権</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="intro-text">
+                        我是一名充满热情的软件工程师，目前在IBM工作。我热爱编程，享受解决复杂问题的过程，
+                        并致力于通过技术创造价值。
+                    </p>
+                    <p class="intro-text">
+                        我相信持续学习和成长的重要性，不断探索新技术，提升自己的专业能力。
+                        在工作之余，我喜欢阅读、旅行和摄影，这些爱好让我的生活更加丰富多彩。
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">工作年限</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1">0</span>
+                            <span class="stat-label">完成项目</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-label">技术认证</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人简历 -->
+    <section id="resume" class="section resume-section">
+        <div class="container">
+            <h2 class="section-title">个人简历</h2>
+            <div class="resume-content">
+                <div class="resume-item">
+                    <div class="resume-icon">🎓</div>
+                    <div class="resume-details">
+                        <h3>教育背景</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>研究生学位</h4>
+                                    <p class="timeline-date">2022 - 2024</p>
+                                    <p>微观经济学专业</p>
+                                    <p>主修课程：微观经济理论、计量经济学、博弈论、产业组织理论</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-icon">💼</div>
+                    <div class="resume-details">
+                        <h3>工作经历</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>IBM - 软件工程师</h4>
+                                    <p class="timeline-date">2024年4月 - 至今</p>
+                                    <ul>
+                                        <li>参与企业级应用开发，使用Java和Spring Boot框架</li>
+                                        <li>负责数据库设计和优化，提升系统性能</li>
+                                        <li>参与敏捷开发流程，与团队协作完成项目交付</li>
+                                        <li>编写技术文档，进行代码审查</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-item">
+                    <div class="resume-icon">🏆</div>
+                    <div class="resume-details">
+                        <h3>证书与成就</h3>
+                        <div class="achievements">
+                            <div class="achievement-card">
+                                <h4>日本語能力試験（JLPT）のN1</h4>
+                                <p>2018</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h4>AWS Certified Cloud Practitioner</h4>
+                                <p>2024年获得</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h4>IBM watsonx Essentials</h4>
+                                <p>2024</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h4>IBM Generative & Agentic AI Foundation</h4>
+                                <p>2024</p>
+                                IBM Garage Foundation
+                            </div>
+                            <div class="achievement-card">
+                                <h4>Enterprise Design Thinking Practitioner</h4>
+                                <p>2025</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h4>IBM Garage Foundation</h4>
+                                <p>2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专业技能 -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">专业技能</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>编程语言</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name">Java</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">SQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">HTML/CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>框架与工具</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name">Spring Boot</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Git</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">AWS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                            <span class="skill-percent">55%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>软技能</h3>
+                    <div class="soft-skills">
+                        <span class="soft-skill-tag">团队协作</span>
+                        <span class="soft-skill-tag">问题解决</span>
+                        <span class="soft-skill-tag">快速学习</span>
+                        <span class="soft-skill-tag">沟通能力</span>
+                        <span class="soft-skill-tag">时间管理</span>
+                        <span class="soft-skill-tag">敏捷开发</span>
+                        <span class="soft-skill-tag">文档编写</span>
+                        <span class="soft-skill-tag">代码审查</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 兴趣爱好 -->
+    <section id="hobbies" class="section hobbies-section">
+        <div class="container">
+            <h2 class="section-title">兴趣爱好</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <div class="hobby-icon">📚</div>
+                    <h3>读书</h3>
+                    <p>喜欢阅读各类书籍，通过阅读拓展视野，提升思维能力。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎵</div>
+                    <h3>听音乐</h3>
+                    <p>喜欢听各种类型的音乐，音乐是我放松和获得灵感的源泉。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎬</div>
+                    <h3>看电影</h3>
+                    <p>享受电影带来的视觉盛宴和情感体验，探索不同的故事世界。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🧘‍♀️</div>
+                    <h3>做普拉提</h3>
+                    <p>通过普拉提锻炼身体，提升核心力量，保持健康和活力。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">✈️</div>
+                    <h3>旅游</h3>
+                    <p>热爱探索不同的城市和文化，体验多样的生活方式，开阔眼界。</p>
+                </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🍱</div>
+                    <h3>吃美食</h3>
+                    <p>热爱品尝各地美食，享受美食带来的幸福感和满足感。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 人生经历 -->
+    <section id="journey" class="section journey-section">
+        <div class="container">
+            <h2 class="section-title">人生经历</h2>
+            <div class="journey-timeline">
+                <div class="journey-item left">
+                    <div class="journey-content">
+                        <div class="journey-year">2016年前</div>
+                        <h3>兰州时光</h3>
+                        <p>在中国兰州成长，度过了充实的学生时代，为未来的学习和发展奠定了基础。</p>
+                    </div>
+                </div>
+                <div class="journey-item right">
+                    <div class="journey-content">
+                        <div class="journey-year">2016</div>
+                        <h3>大连外国语大学</h3>
+                        <p>开始学习日语，两年的语言学习为赴日留学做好了充分准备。</p>
+                    </div>
+                </div>
+                <div class="journey-item left">
+                    <div class="journey-content">
+                        <div class="journey-year">2018</div>
+                        <h3>赴日留学</h3>
+                        <p>前往日本城西大学交换留学，在现代政策学部学习经济学、法律、社会福祉等学科，开启了国际化的学习之旅。</p>
+                    </div>
+                </div>
+                <div class="journey-item right">
+                    <div class="journey-content">
+                        <div class="journey-year">2020</div>
+                        <h3>本科毕业</h3>
+                        <p>顺利完成本科学业，决定继续深造，追求更高的学术目标。</p>
+                    </div>
+                </div>
+                <div class="journey-item left">
+                    <div class="journey-content">
+                        <div class="journey-year">2022</div>
+                        <h3>早稻田大学</h3>
+                        <p>进入早稻田大学社会科学研究科，专注于微观经济学的研究，提升学术能力和专业素养。</p>
+                    </div>
+                </div>
+                <div class="journey-item right">
+                    <div class="journey-content">
+                        <div class="journey-year">2024</div>
+                        <h3>加入IBM</h3>
+                        <p>研究生毕业后加入IBM，开始从事Web Application开发工作，将理论知识应用于实践。</p>
+                    </div>
+                </div>
+                <div class="journey-item left">
+                    <div class="journey-content">
+                        <div class="journey-year">2026</div>
+                        <h3>职业发展</h3>
+                        <p>在IBM工作的第三年，持续提升技术能力，参与更多项目，为团队和公司创造价值。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">联系方式</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>邮箱</h3>
+                            <p>kensherl0818@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/yourprofile</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💻</div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>github.com/yourusername</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📷</div>
+                        <div class="contact-details">
+                            <h3>Instagram</h3>
+                            <p>@kv_qx.1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>发送消息</h3>
+                    <form>
+                        <input type="text" placeholder="您的姓名" required>
+                        <input type="email" placeholder="您的邮箱" required>
+                        <textarea placeholder="您的消息" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 QUAN YUTONG. 保留所有权利.</p>
+            <p>用 ❤️ 和 ☕ 制作</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
