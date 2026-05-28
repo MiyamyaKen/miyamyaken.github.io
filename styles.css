@@ -687,11 +687,11 @@ body {
 }
 
 .skill-percent {
-    position: absolute;
-    right: 0;
-    top: -25px;
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: var(--primary-color);
+    color: #FF6B6B;
     font-weight: 600;
 }
 
