@@ -1085,4 +1085,102 @@ body {
     }
 }
 
-/* Made with Bob */
+/* 手机版优化 - 减少间距 */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 15px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-section {
+        min-height: 70vh;
+        padding: 80px 15px 30px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-content {
+        gap: 1.5rem;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .stat-item {
+        padding: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .resume-item {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hobby-card {
+        padding: 1.5rem;
+    }
+    
+    .hobby-icon {
+        font-size: 3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hobby-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hobby-card p {
+        font-size: 0.9rem;
+    }
+    
+    .journey-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .journey-content {
+        padding: 1.5rem;
+    }
+    
+    .journey-year {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .journey-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .journey-content p {
+        font-size: 0.9rem;
+    }
+    
+    .contact-item {
+        padding: 1rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
