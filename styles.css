@@ -1307,3 +1307,215 @@ body {
         font-weight: 600;
     }
 }
+
+
+/* ==================== 深色模式 ==================== */
+body.dark-mode {
+    --primary-color: #FF8C94;
+    --secondary-color: #FFB3BA;
+    --accent-color: #FFE66D;
+    --text-dark: #e2e8f0;
+    --text-light: #a0aec0;
+    --bg-light: #1a202c;
+    --bg-white: #2d3748;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.4);
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+body.dark-mode .navbar {
+    background: rgba(45, 55, 72, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .navbar.scrolled {
+    background: rgba(45, 55, 72, 0.98);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .nav-link {
+    color: #e2e8f0;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #FF8C94;
+}
+
+body.dark-mode .hamburger span {
+    background: #e2e8f0;
+}
+
+body.dark-mode .nav-menu {
+    background: #2d3748;
+}
+
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+body.dark-mode .section:nth-child(even) {
+    background: #2d3748;
+}
+
+body.dark-mode .flip-card-front,
+body.dark-mode .flip-card-back {
+    background: #2d3748;
+}
+
+body.dark-mode .stat-item {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .stat-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .resume-item {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .resume-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .timeline::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .timeline-dot {
+    background: #FF8C94;
+    box-shadow: 0 0 0 4px rgba(255, 140, 148, 0.2);
+}
+
+body.dark-mode .achievement-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .achievement-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FF8C94;
+}
+
+body.dark-mode .skill-category {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .skill-category:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .soft-skill-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+}
+
+body.dark-mode .soft-skill-tag:hover {
+    background: #FF8C94;
+    color: white;
+}
+
+body.dark-mode .hobby-card {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .hobby-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .hobby-card::before {
+    background: linear-gradient(135deg, rgba(255, 140, 148, 0.3), rgba(255, 230, 109, 0.3));
+}
+
+body.dark-mode .journey-timeline::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .journey-content {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .journey-content:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FF8C94;
+}
+
+body.dark-mode .journey-year {
+    background: #FF8C94;
+    color: white;
+}
+
+body.dark-mode .contact-item {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .contact-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .contact-form {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #e2e8f0;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #FF8C94;
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: #a0aec0;
+}
+
+body.dark-mode .footer {
+    background: #2d3748;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .lang-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #e2e8f0;
+}
+
+body.dark-mode .lang-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .lang-btn.active {
+    background: linear-gradient(135deg, #FF8C94, #FFB3BA);
+    border-color: #FF8C94;
+    color: white;
+}
+
+body.dark-mode .particle {
+    background: rgba(255, 140, 148, 0.3);
+}
+
+/* 深色模式过渡动画 */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar,
+.section,
+.card,
+.btn {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
