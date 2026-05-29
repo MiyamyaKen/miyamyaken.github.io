@@ -1285,8 +1285,8 @@ body {
 @media (max-width: 768px) {
     .nav-language-item {
         width: 100%;
-        margin-top: 1rem;
-        padding-top: 1rem;
+        margin-top: 0.8rem;
+        padding-top: 0.8rem;
         border-top: 1px solid #e2e8f0;
     }
     
@@ -1299,9 +1299,11 @@ body {
     }
     
     .lang-btn {
-        flex: 1;
-        padding: 0.6rem 1rem;
-        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
         text-align: center;
+        border-radius: 12px;
+        min-width: 60px;
+        font-weight: 600;
     }
 }
