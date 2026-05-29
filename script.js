@@ -215,49 +215,24 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ==================== 鼠标跟随效果 - 发光光晕 ====================
+// ==================== 简化光标效果 ====================
 function createCursor() {
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    cursor.style.cssText = `
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        position: fixed;
-        pointer-events: none;
-        z-index: 9999;
-        background: radial-gradient(circle, rgba(102, 126, 234, 0.6) 0%, rgba(118, 75, 162, 0.3) 40%, transparent 70%);
-        transform: translate(-50%, -50%);
-        transition: width 0.3s ease, height 0.3s ease;
-        display: none;
+    // 使用CSS自定义光标样式，无需JavaScript创建额外元素
+    const style = document.createElement('style');
+    style.textContent = `
+        * {
+            cursor: default;
+        }
+        a, button, .btn, .hobby-card, .skill-category, .resume-item,
+        .achievement-card, .contact-item, .nav-link, .hamburger,
+        .lang-btn, .flip-card, .soft-skill-tag {
+            cursor: pointer;
+        }
+        input, textarea {
+            cursor: text;
+        }
     `;
-    document.body.appendChild(cursor);
-
-    let mouseX = 0;
-    let mouseY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        cursor.style.display = 'block';
-        cursor.style.left = mouseX + 'px';
-        cursor.style.top = mouseY + 'px';
-    });
-
-    // 悬停在可点击元素上时放大光晕
-    const clickableElements = document.querySelectorAll('a, button, .hobby-card, .skill-category, .resume-item, .achievement-card, .contact-item');
-    clickableElements.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            cursor.style.width = '70px';
-            cursor.style.height = '70px';
-            cursor.style.background = 'radial-gradient(circle, rgba(240, 147, 251, 0.7) 0%, rgba(245, 87, 108, 0.4) 40%, transparent 70%)';
-        });
-        element.addEventListener('mouseleave', () => {
-            cursor.style.width = '50px';
-            cursor.style.height = '50px';
-            cursor.style.background = 'radial-gradient(circle, rgba(102, 126, 234, 0.6) 0%, rgba(118, 75, 162, 0.3) 40%, transparent 70%)';
-        });
-    });
+    document.head.appendChild(style);
 }
 
 // ==================== 视差滚动效果 ====================
