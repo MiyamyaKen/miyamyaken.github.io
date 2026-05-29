@@ -189,6 +189,12 @@ body {
     gap: 2rem;
     flex: 1;
     justify-content: center;
+    align-items: center;
+}
+
+.nav-language-item {
+    display: flex;
+    align-items: center;
 }
 
 .nav-link {
@@ -1246,7 +1252,7 @@ body {
 .language-switcher {
     display: flex;
     gap: 0.5rem;
-    margin-left: 2rem;
+    margin-left: 0;
 }
 
 .lang-btn {
@@ -1277,22 +1283,23 @@ body {
 
 /* 移动端语言切换器 */
 @media (max-width: 768px) {
+    .nav-language-item {
+        width: 100%;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e2e8f0;
+    }
+    
     .language-switcher {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        flex-direction: column;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 0.8rem;
-        border-radius: 15px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        z-index: 999;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
         margin-left: 0;
-        backdrop-filter: blur(10px);
+        width: 100%;
     }
     
     .lang-btn {
-        width: 100%;
+        flex: 1;
         padding: 0.6rem 1rem;
         font-size: 0.85rem;
         text-align: center;
