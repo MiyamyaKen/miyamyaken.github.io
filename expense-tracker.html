@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记账本 - 个人财务管理</title>
+    <link rel="stylesheet" href="expense-tracker.css">
+</head>
+<body>
+    <!-- 背景装饰 -->
+    <div class="background-decoration">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <h1>💰 我的记账本</h1>
+            <p class="subtitle">轻松管理您的收支</p>
+        </header>
+
+        <!-- 统计卡片 -->
+        <div class="stats-container">
+            <div class="stat-card income-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <p class="stat-label">总收入</p>
+                    <p class="stat-value" id="totalIncome">¥0.00</p>
+                </div>
+            </div>
+            <div class="stat-card expense-card">
+                <div class="stat-icon">📉</div>
+                <div class="stat-info">
+                    <p class="stat-label">总支出</p>
+                    <p class="stat-value" id="totalExpense">¥0.00</p>
+                </div>
+            </div>
+            <div class="stat-card balance-card">
+                <div class="stat-icon">💵</div>
+                <div class="stat-info">
+                    <p class="stat-label">余额</p>
+                    <p class="stat-value" id="balance">¥0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 添加记录表单 -->
+        <div class="form-container">
+            <h2>📝 添加新记录</h2>
+            <form id="transactionForm">
+                <div class="form-group">
+                    <label for="description">描述</label>
+                    <input type="text" id="description" placeholder="例如：午餐、工资等" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="amount">金额</label>
+                        <input type="number" id="amount" placeholder="0.00" step="0.01" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="type">类型</label>
+                        <select id="type" required>
+                            <option value="expense">支出</option>
+                            <option value="income">收入</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">分类</label>
+                        <select id="category" required>
+                            <option value="food">🍔 餐饮</option>
+                            <option value="transport">🚗 交通</option>
+                            <option value="shopping">🛍️ 购物</option>
+                            <option value="entertainment">🎮 娱乐</option>
+                            <option value="health">💊 医疗</option>
+                            <option value="education">📚 教育</option>
+                            <option value="housing">🏠 住房</option>
+                            <option value="travel">✈️ 旅游</option>
+                            <option value="creditcard">💳 信用卡还款</option>
+                            <option value="salary">💼 工资</option>
+                            <option value="investment">📊 投资</option>
+                            <option value="other">📦 其他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">日期</label>
+                        <input type="date" id="date" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <span>➕ 添加记录</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- 筛选和搜索 -->
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="filterType">筛选类型：</label>
+                <select id="filterType">
+                    <option value="all">全部</option>
+                    <option value="income">收入</option>
+                    <option value="expense">支出</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filterCategory">筛选分类：</label>
+                <select id="filterCategory">
+                    <option value="all">全部分类</option>
+                    <option value="food">🍔 餐饮</option>
+                    <option value="transport">🚗 交通</option>
+                    <option value="shopping">🛍️ 购物</option>
+                    <option value="entertainment">🎮 娱乐</option>
+                    <option value="health">💊 医疗</option>
+                    <option value="education">📚 教育</option>
+                    <option value="housing">🏠 住房</option>
+                    <option value="travel">✈️ 旅游</option>
+                    <option value="creditcard">💳 信用卡还款</option>
+                    <option value="salary">💼 工资</option>
+                    <option value="investment">📊 投资</option>
+                    <option value="other">📦 其他</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filterMonth">筛选月份：</label>
+                <select id="filterMonth">
+                    <option value="all">全部月份</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <input type="text" id="searchInput" placeholder="🔍 搜索描述...">
+            </div>
+        </div>
+
+        <!-- 记录列表 -->
+        <div class="transactions-container">
+            <div class="transactions-header">
+                <h2>📋 交易记录</h2>
+                <button class="btn btn-secondary" id="clearAllBtn">🗑️ 清空所有</button>
+            </div>
+            <div id="transactionsList" class="transactions-list">
+                <div class="empty-state">
+                    <div class="empty-icon">📭</div>
+                    <p>暂无记录</p>
+                    <p class="empty-hint">添加您的第一笔收支记录吧！</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 固定支出管理 -->
+        <div class="recurring-container">
+            <div class="recurring-header">
+                <h2>🔄 每月固定支出</h2>
+                <div class="recurring-stats">
+                    <span class="recurring-total">月度固定支出: <strong id="recurringTotal">¥0.00</strong></span>
+                </div>
+                <button class="btn btn-primary" id="addRecurringBtn">➕ 添加固定支出</button>
+            </div>
+            <div id="recurringList" class="recurring-list">
+                <div class="empty-state">
+                    <div class="empty-icon">📅</div>
+                    <p>暂无固定支出</p>
+                    <p class="empty-hint">添加房租、水电等每月固定支出</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 固定支出表单模态框 -->
+        <div id="recurringModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>添加固定支出</h3>
+                    <button class="modal-close" id="closeRecurringModal">✕</button>
+                </div>
+                <form id="recurringForm">
+                    <div class="form-group">
+                        <label for="recurringDescription">描述</label>
+                        <input type="text" id="recurringDescription" placeholder="例如：房租、水电费" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="recurringAmount">金额</label>
+                            <input type="number" id="recurringAmount" placeholder="0.00" step="0.01" min="0" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="recurringCategory">分类</label>
+                            <select id="recurringCategory" required>
+                                <option value="housing">🏠 住房</option>
+                                <option value="food">🍔 餐饮</option>
+                                <option value="transport">🚗 交通</option>
+                                <option value="health">💊 医疗</option>
+                                <option value="education">📚 教育</option>
+                                <option value="creditcard">💳 信用卡还款</option>
+                                <option value="other">📦 其他</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recurringDay">每月扣款日</label>
+                        <select id="recurringDay" required>
+                            <option value="1">1号</option>
+                            <option value="5">5号</option>
+                            <option value="10">10号</option>
+                            <option value="15">15号</option>
+                            <option value="20">20号</option>
+                            <option value="25">25号</option>
+                            <option value="28">28号</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="recurringAutoAdd">
+                            自动添加到交易记录
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <span>💾 保存固定支出</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2026 记账本 | 让理财更简单</p>
+    </footer>
+
+    <script src="expense-tracker.js"></script>
+</body>
+</html>
